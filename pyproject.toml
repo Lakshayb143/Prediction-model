@@ -1,0 +1,16 @@
+[build-system]
+requires= ["setuptools", "wheel"] 
+build-backend = "setuptools.build_meta"
+
+[project] 
+name = "House Prediction Model"
+version = "1.0.0"
+description = "A comprehensive machine learning project for price prediction"
+authors = [{name = "Lakshay Bhatia", email = "lakshaybhatia46@gmail.com"}]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
