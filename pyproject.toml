@@ -9,8 +9,13 @@ description = "A comprehensive machine learning project for price prediction"
 authors = [{name = "Lakshay Bhatia", email = "lakshaybhatia46@gmail.com"}]
 license = {text = "MIT"}
 classifiers = [
-    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
 
+requires-python = ">=3.11"
+
+
+[tool.setuptools]
+packages = ["src"]
