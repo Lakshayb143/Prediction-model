@@ -5,6 +5,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
+"""
+Here we are using Template design pattern to create the templates for Missing Value Analysis.
+"""
+
+
 # This class defines a template for missing values analysis.
 class MissingValueAnalysisTemplate(ABC):
 

@@ -19,7 +19,7 @@ def handle_missing_values_stage(dataframe :pd.DataFrame, strategy :str = "mean")
     if strategy == "drop":
         handler = MissingValueHandler(DropMissingValuesStrategy(axis=0, thresh=5))
 
-    elif strategy == ["mean", "median", "constant", "mode"]:
+    elif strategy in ["mean", "median", "constant", "mode"]:
         handler = MissingValueHandler(FillMissingValuesStrategy(method=strategy))
 
     else:

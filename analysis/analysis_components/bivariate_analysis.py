@@ -32,6 +32,14 @@ class CategoricalAndNumericalAnalysis(BivariateAnalysisStrategy):
     def analyze(self, df: DataFrame, feature1: str, feature2: str):
         """
         Plots the relationship between a categorical feature and a numerical feature using a box plot.
+
+        Parameters:
+        df (pd.DataFrame): The dataframe containing the data.
+        feature1 (str): The name of the categorical feature/column to be analyzed.
+        feature2 (str): The name of the numerical feature/column to be analyzed.
+
+        Returns:
+        None: Displays a box plot showing the relationship between the categorical and numerical features.
         """
         plt.figure(figsize=(10, 6))
         sns.boxplot(x=feature1, y=feature2, data=df)

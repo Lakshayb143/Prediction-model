@@ -6,7 +6,6 @@ import sys
 
 import mlflow
 import pandas as pd
-from sklearn.base import RegressorMixin
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LinearRegression
@@ -28,7 +27,7 @@ model = Model(
 
 
 @step(enable_cache=False, experiment_tracker=experiment_tracker.name, model=model)
-def model_building_step(X_train: pd.DataFrame, y_train: pd.Series) -> Annotated[Pipeline, ArtifactConfig]:
+def model_building_step(X_train: pd.DataFrame, y_train: pd.Series) -> Annotated[Pipeline, ArtifactConfig(name="trained_pipeline")]:
     """
     Builds and trains a Linear Regression model using scikit-learn wrapped in a pipeline.
 

@@ -73,7 +73,7 @@ class DataIngestorFactory:
             return ZipDataIngestor()
         else:
             logging.error(f"No data ingestor for file with extension {file_path}")
-            raise ValueError(f"No data ingestor for file with extension {file_path} ")
+            raise ValueError(f"No data ingestor for file with extension {file_extension} ")
             
 
 

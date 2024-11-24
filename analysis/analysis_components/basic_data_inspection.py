@@ -3,6 +3,11 @@ from abc import ABC, abstractmethod
 from pandas import DataFrame
 
 
+"""
+Here we are using Strategy Design Pattern to create different strategies for data inspection.
+"""
+
+
 # It acts as a common interface for data inspection strategies.
 class DataIngestionStrategy(ABC):
 

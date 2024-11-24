@@ -27,7 +27,7 @@ def ml_pipeline():
 
     # Feature Engineering Step
     engineered_data = feature_engineering_stage(
-        filled_data, strategy="log", features=["Gr Liv Area", "SalePrice"]
+        filled_data, strategy="LogTransformation", features=["Gr Liv Area", "SalePrice"]
     )
 
 

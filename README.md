@@ -19,14 +19,25 @@ The project can only be executed with a ZenML stack that has an MLflow experimen
 tracker and model deployer as a component. Configuring a new stack with the two
 components are as follows:
 
-```bash
+```commandline
 
 zenml integration install mlflow -y
 
-zenml experiment-tracker register mlflow_tracker --flavor=mlflow
+zenml experiment-tracker register mlflow_price_predictor_tracker --flavor=mlflow
 
-zenml model-deployer register mlflow --flavor=mlflow
+zenml model-deployer register mlflow_deployer --flavor=mlflow
+ 
+zenml stack register price-predictor-mlflow-stack -a default -o default -d mlflow_deployer -e mlflow_price_predictor_tracker --set
 
-zenml stack register local-mlflow-stack -a default -o default -d mlflow -e mlflow_tracker
---set
 ```
+
+**Verification**
+
+You can run the below command for verification that it works properly.
+
+```commandline
+zenml stack describe
+```
+
+The output of above command should look like image below:
+![img.png](img.png)
