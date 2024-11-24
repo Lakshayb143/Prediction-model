@@ -1,5 +1,5 @@
 from src.exception import CustomException
-from src.logger import logging
+import logging
 from typing import Annotated
 import sys
 
